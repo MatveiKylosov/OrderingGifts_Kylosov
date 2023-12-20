@@ -35,10 +35,10 @@
             </Grid>
         </Border>
 
-        <Border Grid.Column="1" CornerRadius="7" Margin="10" Background="#272727">
+        <Border Grid.Column="1" Margin="10">
             <!--Сами подарки-->
             <Grid>
-                <ScrollViewer x:Name="scroll_main" Margin="240,0,0,0" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
+                <ScrollViewer x:Name="scroll_main" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
                     <StackPanel x:Name="parrent"/>
                 </ScrollViewer>
             </Grid>

@@ -13,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace OrderingGifts_Kylosov
+namespace OrderingGifts_Kylosov.Elements
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для GiftElement.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GiftElement : UserControl
     {
-        public MainWindow()
+        public GiftElement()
         {
             InitializeComponent();
-            for(int i = 0; i < 10; i++)
-            {
-                parrent.Children.Add(new Elements.GiftElement());
-            }
         }
     }
 }

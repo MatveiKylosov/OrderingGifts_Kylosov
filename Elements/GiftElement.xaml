@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="OrderingGifts_Kylosov.Elements.GiftElement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OrderingGifts_Kylosov.Elements"
+             mc:Ignorable="d">
+    <Border CornerRadius="7" Background="#272727" Margin="10">
+        <Grid Margin="10">
+            <TextBlock Text="ФИО заказчика:"         Foreground="white" FontWeight="Bold" Height="16" Width="102" Margin="10,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Text="Кылосов Матвей Михайлович"         Foreground="white" FontWeight="Bold" Height="16" Margin="160,20,10,0" VerticalAlignment="Top"/>
+
+            <TextBlock Text="Текст сообщения:"       Foreground="white" FontWeight="Bold" Height="16" Margin="10,41,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108" />
+            <TextBlock Text="Кылосов Матвей Михайлович"         Foreground="white" FontWeight="Bold" Height="16" Margin="160,41,10,0" VerticalAlignment="Top"/>
+
+            <TextBlock Text="Адрес доставки:"        Foreground="white" FontWeight="Bold" Height="16" Margin="10,62,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="102" />
+            <TextBlock Text="Кылосов Матвей Михайлович"         Foreground="white" FontWeight="Bold" Height="16" Margin="160,0,10,0" VerticalAlignment="Center"/>
+
+            <TextBlock Text="Дата и время отправки:" Foreground="white" FontWeight="Bold" Height="16" Margin="10,83,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="142" />
+            <TextBlock Text="Кылосов Матвей Михайлович"         Foreground="white" FontWeight="Bold" Height="16" Margin="160,83,10,0" VerticalAlignment="Top"/>
+
+            <TextBlock Text="Почта для связи:"       Foreground="white" FontWeight="Bold" Height="16" Margin="10,104,10,20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="142"/>
+            <TextBlock Text="Кылосов Матвей Михайлович"         Foreground="white" FontWeight="Bold" Height="16" Margin="160,104,10,0" VerticalAlignment="Top"/>
+        </Grid>
+    </Border>
+</UserControl>
