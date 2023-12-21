@@ -5,22 +5,25 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:OrderingGifts_Kylosov.Elements"
              mc:Ignorable="d">
-    <Border CornerRadius="7" Background="#272727" Margin="10">
-        <Grid Margin="10">
+    <Border CornerRadius="7" Background="#272727" Margin="10" VerticalAlignment="Center" >
+        <Grid Margin="10, 10, 10, 20" >
             <TextBlock Text="ФИО заказчика:"         Foreground="white" FontWeight="Bold" Height="16" Width="102" Margin="10,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-            <TextBlock Text="Кылосов Матвей Михайлович"         Foreground="white" FontWeight="Bold" Height="16" Margin="160,20,10,0" VerticalAlignment="Top"/>
+            <TextBlock x:Name="FIO" Text="Кылосов Матвей Михайлович"         Foreground="white"  Height="16" Margin="10,41,60,0" VerticalAlignment="Top"/>
 
-            <TextBlock Text="Текст сообщения:"       Foreground="white" FontWeight="Bold" Height="16" Margin="10,41,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108" />
-            <TextBlock Text="Кылосов Матвей Михайлович"         Foreground="white" FontWeight="Bold" Height="16" Margin="160,41,10,0" VerticalAlignment="Top"/>
+            <TextBlock Text="Текст сообщения:"       Foreground="white" FontWeight="Bold" Height="16" Margin="10,62,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108" />
+            <TextBlock x:Name="TextMessage" Text="Кылосов Матвей Михайлович"         Foreground="white"  Height="16" Margin="10,83,60,0" VerticalAlignment="Top"/>
 
-            <TextBlock Text="Адрес доставки:"        Foreground="white" FontWeight="Bold" Height="16" Margin="10,62,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="102" />
-            <TextBlock Text="Кылосов Матвей Михайлович"         Foreground="white" FontWeight="Bold" Height="16" Margin="160,0,10,0" VerticalAlignment="Center"/>
+            <TextBlock Text="Адрес доставки:"        Foreground="white" FontWeight="Bold" Height="16" Margin="10,106,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="102" />
+            <TextBlock x:Name="Address" Text="Кылосов Матвей Михайлович"         Foreground="white"  Height="16" Margin="10,127,60,0" VerticalAlignment="Top"/>
 
-            <TextBlock Text="Дата и время отправки:" Foreground="white" FontWeight="Bold" Height="16" Margin="10,83,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="142" />
-            <TextBlock Text="Кылосов Матвей Михайлович"         Foreground="white" FontWeight="Bold" Height="16" Margin="160,83,10,0" VerticalAlignment="Top"/>
+            <TextBlock Text="Дата и время отправки:" Foreground="white" FontWeight="Bold" Height="16" Margin="10,148,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="142" />
+            <TextBlock x:Name="DateAndTime" Text="Кылосов Матвей Михайлович"         Foreground="white"  Height="16" Margin="10,169,60,0" VerticalAlignment="Top"/>
 
-            <TextBlock Text="Почта для связи:"       Foreground="white" FontWeight="Bold" Height="16" Margin="10,104,10,20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="142"/>
-            <TextBlock Text="Кылосов Матвей Михайлович"         Foreground="white" FontWeight="Bold" Height="16" Margin="160,104,10,0" VerticalAlignment="Top"/>
+            <TextBlock Text="Почта для связи:"       Foreground="white" FontWeight="Bold" Height="16" Margin="10,190,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="142"/>
+            <TextBlock x:Name="Mail" Text="Кылосов Матвей Михайлович"         Foreground="white"  Height="16" Margin="10,211,60,0" VerticalAlignment="Top"/>
+
+            <Button Margin="10,235,0,20" Click="Edit_Click" Height="25" VerticalAlignment="Top" Content="Редактировать" HorizontalAlignment="Left" Width="85"/>
+            <Button Margin="100,235,0,20" Click="Delete_Click" Height="25" VerticalAlignment="Top" Content="Удалить" HorizontalAlignment="Left" Width="85"/>
         </Grid>
     </Border>
 </UserControl>
