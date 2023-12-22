@@ -23,32 +23,31 @@ namespace OrderingGifts_Kylosov
     {
         public static MainWindow main;
         public Classes.ConnectionDataBase Connection = new Classes.ConnectionDataBase(@"C:\Users\matve\Documents\PR23.accdb");
-
+        public List<string> category;
 
         public MainWindow()
         {
             main = this;
             InitializeComponent();
+            category = Connection.LoadCategory();
+            if (Connection.err != "") MessageBox.Show(Connection.err);
             OutputGifts();
         }
 
-        public void OutputGifts()
+        public void OutputGifts(string query = null)
         {
             parrent.Children.Clear();
 
-            foreach (Classes.GiftInfo x in Connection.LoadGift())
+            foreach (Classes.GiftInfo x in query == null | query == "" ? Connection.LoadGift() : Connection.LoadGift(query))
                 parrent.Children.Add(new Elements.GiftElement(x));
-            
         }
 
         private void Filter_Click(object sender, RoutedEventArgs e)
         {
+            Windows.FilterWindow filterWindow = new Windows.FilterWindow(category);
+            filterWindow.ShowDialog();
 
-        }
-
-        private void Search_Click(object sender, RoutedEventArgs e)
-        {
-
+            OutputGifts(filterWindow.query);
         }
 
         private void Create_Click(object sender, RoutedEventArgs e)
@@ -57,5 +56,7 @@ namespace OrderingGifts_Kylosov
             x.ShowDialog();
             OutputGifts();
         }
+
+        private void Reset_Click(object sender, RoutedEventArgs e) => OutputGifts();
     }
 }

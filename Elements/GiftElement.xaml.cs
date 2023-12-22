@@ -33,6 +33,7 @@ namespace OrderingGifts_Kylosov.Elements
             Address.Text = gift.Address;
             DateAndTime.Text = gift.DateAndTime;
             Mail.Text = gift.Mail;
+            Category.Text = gift.Category;
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
@@ -40,6 +41,7 @@ namespace OrderingGifts_Kylosov.Elements
             //Открытие нового окна, получение введённых данных и после редактирование.
             Windows.CreateEditWindow x = new Windows.CreateEditWindow(gift);
             x.ShowDialog();
+            MainWindow.main.OutputGifts();
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)

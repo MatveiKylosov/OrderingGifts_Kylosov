@@ -22,8 +22,11 @@
             <TextBlock Text="Почта для связи:"       Foreground="white" FontWeight="Bold" Height="16" Margin="10,190,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="142"/>
             <TextBlock x:Name="Mail" Text="Кылосов Матвей Михайлович"         Foreground="white"  Height="16" Margin="10,211,60,0" VerticalAlignment="Top"/>
 
-            <Button Margin="10,235,0,20" Click="Edit_Click" Height="25" VerticalAlignment="Top" Content="Редактировать" HorizontalAlignment="Left" Width="85"/>
-            <Button Margin="100,235,0,20" Click="Delete_Click" Height="25" VerticalAlignment="Top" Content="Удалить" HorizontalAlignment="Left" Width="85"/>
+            <TextBlock Text="Категория:"       Foreground="white" FontWeight="Bold" Height="16" Margin="10,232,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="142"/>
+            <TextBlock x:Name="Category" Text="Человек"         Foreground="white"  Height="16" Margin="10,253,60,0" VerticalAlignment="Top" />
+
+            <Button Margin="8,284,20,10" Click="Edit_Click" Height="25" VerticalAlignment="Top" Content="Редактировать" HorizontalAlignment="Left" Width="85"/>
+            <Button Margin="98,284,20,10" Click="Delete_Click" Height="25" VerticalAlignment="Top" Content="Удалить" HorizontalAlignment="Left" Width="85"/>
         </Grid>
     </Border>
 </UserControl>

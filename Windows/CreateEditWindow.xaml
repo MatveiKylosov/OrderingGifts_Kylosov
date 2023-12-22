@@ -25,8 +25,11 @@
             <TextBlock Text="Почта для связи"       Foreground="white" FontWeight="Bold" Height="16" Margin="22,236,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="142"/>
             <TextBox  x:Name="Mail" Height="20" Margin="22,257,22,0" VerticalAlignment="Top"/>
 
-            <Button x:Name="MainButton" VerticalAlignment="Top" Margin="20,288,25,20" Padding="10" Content="Изменить/Добавить" Height="38" Click="MainButton_Click"/>
-            <Button Content="Закрыть"  VerticalAlignment="Top" Margin="21,331,24,20" Padding="10" Height="38" Click="Close_Click"/>
+            <TextBlock Text="Категория"       Foreground="white" FontWeight="Bold" Height="16" Margin="22,290,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="142"/>
+            <TextBox  x:Name="Category" Height="20" Margin="22,311,22,0" VerticalAlignment="Top"/>
+
+            <Button x:Name="MainButton" VerticalAlignment="Top" Margin="22,346,23,0" Padding="10" Content="Изменить/Добавить" Height="38" Click="MainButton_Click"/>
+            <Button Content="Закрыть"  VerticalAlignment="Top" Margin="22,392,23,20" Padding="10" Height="38" Click="Close_Click"/>
         </Grid>
     </Border>
 </Window>

@@ -14,12 +14,15 @@
         </Grid.RowDefinitions>
 
         <Menu Height="20" VerticalAlignment="Top" Grid.Row="0">
-            <MenuItem Header="Сортировка" Click="Filter_Click"></MenuItem>
+            <MenuItem Header="Сортировка">
+                <MenuItem Header="Установить фильтр" Click="Filter_Click"></MenuItem>
+                <MenuItem Header="Сбросить фильтр" Click="Reset_Click" ></MenuItem>
+            </MenuItem>
             <MenuItem Header="Создание"   Click="Create_Click"></MenuItem>
         </Menu>
 
         <Grid Grid.Row="1" >
-            <ScrollViewer x:Name="scroll_main" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto">
+            <ScrollViewer Margin="20" x:Name="scroll_main" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto">
                 <StackPanel x:Name="parrent" Orientation="Horizontal"/>
             </ScrollViewer>
         </Grid>

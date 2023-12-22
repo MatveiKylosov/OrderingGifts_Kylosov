@@ -16,7 +16,7 @@ namespace OrderingGifts_Kylosov.Classes
         public string Mail;
         public string Category;
 
-        public GiftInfo(int id, string FIO, string TextMsg, string Address, string DateAndTime, string Mail)
+        public GiftInfo(int id, string FIO, string TextMsg, string Address, string DateAndTime, string Mail, string Category)
         {
             this.id = id;
             this.FIO = FIO;
@@ -24,6 +24,7 @@ namespace OrderingGifts_Kylosov.Classes
             this.Address = Address;
             this.DateAndTime = DateAndTime;
             this.Mail = Mail;
+            this.Category   = Category;
         }
     }
 

@@ -40,13 +40,24 @@ namespace OrderingGifts_Kylosov.Classes
                 OleDbCommand cmd = new OleDbCommand(query, connect);
                 OleDbDataReader reader = cmd.ExecuteReader();
                 return reader;
-        }
+            }
             catch (Exception ex)
             {
                 err = (ex.Message.ToString());
                 return null;
             }
-}
+        }
+        
+        public List<string> LoadCategory()
+        {
+            List<string> category = new List<string>();
+            OleDbDataReader itemQuery = QueryAccess("SELECT * FROM [Category] ORDER BY [Code]");
+
+            while (itemQuery.Read())
+                category.Add(Convert.ToString(itemQuery.GetValue(1)));
+            
+            return category;
+        }
 
         public bool CUDGift(string query)
         {
@@ -55,10 +66,10 @@ namespace OrderingGifts_Kylosov.Classes
             return itemQuery != null;
         }
 
-        public List<Classes.GiftInfo> LoadGift()
+        public List<Classes.GiftInfo> LoadGift(string query = "SELECT * FROM [Gift] ORDER BY [Code]")
         {
             List <Classes.GiftInfo> gifts = new List<Classes.GiftInfo>();
-            OleDbDataReader itemQuery = QueryAccess("SELECT * FROM [Gift] ORDER BY [Code]");
+            OleDbDataReader itemQuery = QueryAccess(query);
 
             while(itemQuery.Read())
             {
@@ -68,7 +79,8 @@ namespace OrderingGifts_Kylosov.Classes
                     Convert.ToString(itemQuery.GetValue(2)),
                     Convert.ToString(itemQuery.GetValue(3)),
                     Convert.ToString(itemQuery.GetValue(4)),
-                    Convert.ToString(itemQuery.GetValue(5))
+                    Convert.ToString(itemQuery.GetValue(5)),
+                    Convert.ToString(itemQuery.GetValue(6))
                     ));
             }
             if (itemQuery != null) itemQuery.Close();
